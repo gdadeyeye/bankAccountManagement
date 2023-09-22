@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Bank Account Management System</title>
+  <link rel="stylesheet" type="text/css" href="index.css">   
+  <script src="index.js" defer></script> 
+</head>
+
+<body>
+    <div class="relative">
+        <img src="bank_images.PNG" alt="bankaccount" width="35px" height="20px">
+    </div>
+
+    <h1>iBanking</h1>
+    <div class="management">
+        <div>
+            <select id="account_management">
+                <option value="choose account">Choose Account</option>
+                <option value="checking">Checking</option>
+                <option value="saving">Savings</option>
+            </select>
+        </div><br>
+        
+        <div id="alignment" style="width:50px;">
+            <button class="btn btn-primary" style ="width:250px;" onclick="getAccountInfo()" >ACCOUNT DETAILS</button><br>
+            <button class="btn btn-primary" style ="width:250px;" onclick="getDepostInfo()"  >DEPOSIT CASH</button>
+            <button class="btn btn-primary" style ="width:250px;" onclick="getWithdrawInfo()" >WITHDRAW</button>
+            <button class="btn btn-primary" style ="width:250px;" >CHECK BALANCE</button>
+        </div>
+    </div>
+
+    <table class="AccountDetails" id="account" style="width:40%">
+        <tr>
+          <th>Bank Account ID</th>
+          <th>Account Balance</th>
+          <th>Account Type</th>
+        </tr>
+        <tr>
+          <td>10002</td>
+          <td >635,850.00</td>
+          <td>Savings Account</td>
+        </tr>
+        <tr>
+          <td>10000</td>
+          <td>$8,002,489.00</td>
+          <td>Checking Account</td>
+        </tr>
+    </table>
+
+    <table class="DepositCash" id="cash" style="width:40%">
+      <tr>
+        <th>Bank Account ID</th>
+        <th>Deposit Cash</th>
+        <th>Account Type</th>
+      </tr>
+      <tr>
+        <td>10002</td>
+        <td><input type="number" id="Amount" required></td>
+        <td>Savings Account</td>
+        <td><button class="button button4" onclick="deposit()">Deposit</button></td>
+      </tr>
+      <tr>
+        <td>10000</td>
+        <td><input type="number" id="Amount" required></td>
+        <td>Checking Account</td>
+        <td><button class="button button4" onclick="deposit()" >Deposit</button></td>
+      </tr>
+  </table>
+
+  <table class="WithdrawCash" id="withdraw" style="width:40%">
+    <tr>
+      <th>Bank Account ID</th>
+      <th>Withdraw Cash</th>
+      <th>Account Type</th>
+    </tr>
+    <tr>
+      <td>10002</td>
+      <td><input type="number" id="amount" required></td>
+      <td>Savings Account</td>
+      <td><button class="button button4">Withdraw</button></td>
+    </tr>
+    <tr>
+      <td>10000</td>
+      <td><input type="number" id="amount" required></td>
+      <td>Checking Account</td>
+      <td><button class="button button4">Withdraw</button></td>
+    </tr>
+  </table>
+
+  <p id="demo"></p>
+  
+</body>
