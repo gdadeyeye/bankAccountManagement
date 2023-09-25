@@ -1,4 +1,4 @@
-var balance = 0;
+
   
     function getAccountInfo(){
         document.getElementById("account").style.display ="block";
@@ -18,21 +18,36 @@ var balance = 0;
         document.getElementById("account").style.display ="none";
     }
 
+    var balance = 0;
+    function  deposit() {
+    var amount = document.getElementById("SAmount").value;
+    balance =+ amount;
+    document.getElementById("accountAmtS").innerHTML = balance;
+}
+
+function  depositC() {
+    var amount = document.getElementById("CAmount").value;
+    balance =+amount;
+    document.getElementById("accountAmtC").innerHTML = balance;
+}  
+
+function  WithdrawS(){
+    if(amount <= balance){
+        balance =-amount;
+    }
+    var amount = document.getElementById("WSamount").value;
     
-   function  deposit() {
-    var amount = document.getElementById("Amount").value;
-        //try {
-           //if (amount <= 0 || isNaN(amount)) {
-            // console.log('Invalid deposit amount. Please enter a positive number.');
-          // }
-           balance =+ amount;
-           //console.log(`Deposited $${amount}. New balance: $${balance}`);
-         } //catch (error) {
-           //console.log(`Error: ${error.message}`);
-        // } finally {
-         //  console.log('Deposit operation completed.');
-        // }
-         document.getElementById("demo").innerHTML = parseInt(balance);
+    document.getElementById("accountAmtS").innerHTML = balance;
+}
+
+function  WithdrawC() {
+    var amount = document.getElementById("WCamount").value;
+    balance =-amount;
+    document.getElementById("accountAmtC").innerHTML = balance;
+}
+
+        
+         
        
   
  
