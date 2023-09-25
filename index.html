@@ -39,12 +39,12 @@
         </tr>
         <tr>
           <td>10002</td>
-          <td id="accountAmt"></td>
+          <td id="accountAmtS"></td>
           <td>Savings Account</td>
         </tr>
         <tr>
           <td>10000</td>
-          <td>$8,002,489.00</td>
+          <td id="accountAmtC"></td>
           <td>Checking Account</td>
         </tr>
     </table>
@@ -57,15 +57,15 @@
       </tr>
       <tr>
         <td>10002</td>
-        <td><input type="text" id="Amount" required></td>
+        <td><input type="number" id="SAmount" required></td>
         <td>Savings Account</td>
         <td><button class="button button4" onclick="deposit()">Deposit</button></td>
       </tr>
       <tr>
         <td>10000</td>
-        <td><input type="number" id="Amount" required></td>
+        <td><input type="number" id="CAmount" required></td>
         <td>Checking Account</td>
-        <td><button class="button button4" onclick="deposit()" >Deposit</button></td>
+        <td><button class="button button4" onclick="depositC()" >Deposit</button></td>
       </tr>
   </table>
 
@@ -77,15 +77,15 @@
     </tr>
     <tr>
       <td>10002</td>
-      <td><input type="number" id="amount" required></td>
+      <td><input type="number" id="WSamount" required></td>
       <td>Savings Account</td>
-      <td><button class="button button4">Withdraw</button></td>
+      <td><button class="button button4" onclick="WithdrawS()">Withdraw</button></td>
     </tr>
     <tr>
       <td>10000</td>
-      <td><input type="number" id="amount" required></td>
+      <td><input type="number" id="WCamount" required></td>
       <td>Checking Account</td>
-      <td><button class="button button4">Withdraw</button></td>
+      <td><button class="button button4" onclick="WithdrawC()">Withdraw</button></td>
     </tr>
   </table>
   
